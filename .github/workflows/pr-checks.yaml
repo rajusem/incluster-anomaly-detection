@@ -10,19 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
-      - name: Set up Python 3.9
-        uses: actions/setup-python@main
-        with:
-          # Semantic version range syntax or exact version of a Python version
-          python-version: '3.9'
-          # Optional - x64 or x86 architecture, defaults to x64
-          architecture: 'x64'
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-      - name: Install pipenv
-        run: pip install pipenv
-      - name: Install code dependencies
-        run: pipenv install --dev
+        uses: ./.github/actions/setup-pipenv
       - name: Check lint issues
         run: pipenv run pylint src tests
