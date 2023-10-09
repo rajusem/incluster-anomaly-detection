@@ -7,7 +7,7 @@ on:
 
 jobs:
   pylint-reuse:
-    uses: rajusem/incluster-anomaly-detection
+    uses: ./.github/workflows/template.yaml
     steps:
       - name: Check lint issues
         run: pipenv run pylint src tests
