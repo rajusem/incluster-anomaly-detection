@@ -1,6 +1,7 @@
 """Driver for in-cluster metric data access and detect basic anomaly."""
 import datetime
 import json
+import json
 import sys
 
 import daiquiri
