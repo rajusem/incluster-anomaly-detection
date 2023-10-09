@@ -2,7 +2,6 @@
 import datetime
 import json
 import sys
-import json
 
 import daiquiri
 from kubernetes.config import load_incluster_config
